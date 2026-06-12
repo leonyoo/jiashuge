@@ -1,0 +1,49 @@
+import type { CognitiveGameType } from '../types';
+
+export interface CognitiveGameDef {
+  id: CognitiveGameType; name: string; emoji: string; desc: string;
+  benefit: string; duration: number; maxLevel: number;
+}
+
+// 8 款益智游戏 — 全部围绕"防老年痴呆"设计：记忆、注意力、计算、语言流畅、时间定向、回忆疗法
+export const COGNITIVE_GAMES: CognitiveGameDef[] = [
+  { id:'memory-cards',   name:'翻牌记忆',  emoji:'\uD83C\uDCCF', desc:'翻开两张一样的牌',     benefit:'\u77ED\u65F6\u8BB0\u5FC6',     duration:180, maxLevel:6 },
+  { id:'sequence',       name:'\u6570\u5B57\u5E8F\u5217',  emoji:'\uD83D\uDD22', desc:'\u8BB0\u4F4F\u8D8A\u6765\u8D8A\u957F\u7684\u6570\u5B57\u4E32', benefit:'\u5DE5\u4F5C\u8BB0\u5FC6',     duration:120, maxLevel:8 },
+  { id:'find-difference',name:'\u627E\u4E0D\u540C',    emoji:'\uD83D\uDD0D', desc:'\u4E24\u5E45\u56FE\u627E\u51FA\u4E00\u5904\u4E0D\u540C',   benefit:'\u89C6\u89C9\u6CE8\u610F\u529B',   duration:120, maxLevel:6 },
+  { id:'daily-math',     name:'\u6BCF\u65E5\u7B97\u672F',  emoji:'\u2795', desc:'\u4E70\u83DC\u3001\u627E\u96F6\u3001\u8BA1\u7B97\u65F6\u95F4', benefit:'\u8BA1\u7B97\u80FD\u529B',         duration:180, maxLevel:10 },
+  { id:'word-chain',     name:'\u6210\u8BED\u63A5\u9F99',  emoji:'\uD83D\uDD17', desc:'\u7528\u4E0A\u4E00\u4E2A\u6210\u8BED\u7684\u672B\u5B57\u5F00\u5934',   benefit:'\u8BED\u8A00\u6D41\u7545\u6027',   duration:180, maxLevel:99 },
+  { id:'reminder-time',  name:'\u65F6\u95F4\u8BA1\u7B97',  emoji:'\u23F0', desc:'\u73B0\u5728\u51E0\u70B9\uFF1F\u534A\u5C0F\u65F6\u540E\u5462\uFF1F', benefit:'\u65F6\u95F4\u5B9A\u5411',         duration:120, maxLevel:8 },
+  { id:'classic-poem',   name:'\u53E4\u8BD7\u80CC\u8BF5',  emoji:'\uD83D\uDCDC', desc:'\u8865\u5168\u7ECF\u5178\u53E4\u8BD7\u7684\u4E0B\u4E00\u53E5',     benefit:'\u6587\u5316\u8BB0\u5FC6\u4E0E\u60C5\u611F', duration:180, maxLevel:10 },
+  { id:'family-photo',   name:'\u5BB6\u5EAD\u76F8\u518C',  emoji:'\uD83D\uDCF7', desc:'\u56DE\u5FC6\u5BB6\u4EBA\uFF0C\u804A\u804A\u8FC7\u53BB',     benefit:'\u56DE\u5FC6\u7597\u6CD5\uFF0C\u6539\u5584\u60C5\u7EEA', duration:300, maxLevel:1 }
+];
+
+// 古诗填空
+export const POEM_QUESTIONS = [
+  { q:'\u5E8A\u524D\u660E\u6708\u5149\uFF0C\u7591\u662F\u5730\u4E0A\u971C\u3002', next:'\u4E3E\u5934\u671B\u660E\u6708\uFF0C\u4F4E\u5934\u601D\u6545\u4E61\u3002', author:'\u674E\u767D\u300A\u9759\u591C\u601D\u300B' },
+  { q:'\u6625\u7720\u4E0D\u89C9\u6653\uFF0C\u5904\u5904\u95FB\u557C\u9E1F\u3002', next:'\u591C\u6765\u98CE\u96E8\u58F0\uFF0C\u82B1\u843D\u77E5\u591A\u5C11\u3002', author:'\u5B5F\u6D69\u7136\u300A\u6625\u6653\u300B' },
+  { q:'\u767D\u65E5\u4F9D\u5C71\u5C3D\uFF0C\u9EC4\u6CB3\u5165\u6D77\u6D41\u3002', next:'\u6B32\u7A77\u5343\u91CC\u76EE\uFF0C\u66F4\u4E0A\u4E00\u5C42\u697C\u3002', author:'\u738B\u4E4B\u6DA3\u300A\u767B\u9E3F\u96C0\u697C\u300B' },
+  { q:'\u9504\u79BE\u65E5\u5F53\u5348\uFF0C\u6C57\u6EF4\u79BE\u4E0B\u571F\u3002', next:'\u8C01\u77E5\u76D8\u4E2D\u9910\uFF0C\u7C92\u7C92\u7686\u8270\u82E6\u3002', author:'\u674E\u7EC5\u300A\u609F\u519C\u300B' },
+  { q:'\u4EBA\u4E4B\u521D\uFF0C\u6027\u672C\u5584\u3002', next:'\u6027\u76F8\u8FD1\uFF0C\u4E60\u76F8\u8FDC\u3002', author:'\u300A\u4E09\u5B57\u7ECF\u300B' },
+  { q:'\u9E45\u9E45\u9E45\uFF0C\u66F2\u9879\u5411\u5929\u6B4C\u3002', next:'\u767D\u6BDB\u6D6E\u7EFF\u6C34\uFF0C\u7EA2\u638C\u62E8\u6E05\u6CE2\u3002', author:'\u9A7C\u5BB4\u738B\u300A\u548F\u9E45\u300B' },
+  { q:'\u79BB\u79BB\u539F\u4E0A\u8349\uFF0C\u4E00\u5C81\u4E00\u67AF\u8363\u3002', next:'\u91CE\u706B\u70E7\u4E0D\u5C3D\uFF0C\u6625\u98CE\u5439\u53C8\u751F\u3002', author:'\u767D\u5C45\u6613\u300A\u8D4B\u5F97\u53E4\u539F\u8349\u9001\u522B\u300B' }
+];
+
+// 翻牌记忆图样池（emoji）
+export const MEMORY_ICONS = ['\uD83D\uDC26','\uD83D\uDC31','\uD83D\uDC36','\uD83C\uDF38','\uD83C\uDF75','\uD83C\uDF3B','\uD83C\uDFEE','\uD83C\uDF19'];
+
+// 找不同
+export const FIND_DIFF_SETS = [
+  { a: '\uD83C\uDF33\uD83C\uDF32\uD83C\uDF35\uD83C\uDF34\uD83C\uDF3F', b: '\uD83C\uDF33\uD83C\uDF32\uD83C\uDF34\uD83C\uDF34\uD83C\uDF3F', answer:2 },
+  { a: '\uD83D\uDC26\uD83D\uDC26\uD83D\uDC26\uD83D\uDC26\uD83D\uDC26', b: '\uD83D\uDC26\uD83D\uDC26\uD83D\uDC26\uD83D\uDC26\uD83D\uDC26', answer:2 },
+  { a: '\uD83C\uDF4E\uD83C\uDF4A\uD83C\uDF4E\uD83C\uDF4A\uD83C\uDF4E', b: '\uD83C\uDF4E\uD83C\uDF4A\uD83C\uDF4A\uD83C\uDF4A\uD83C\uDF4E', answer:2 },
+  { a: '\uD83C\uDF37\uD83C\uDF39\uD83C\uDF37\uD83C\uDF39\uD83C\uDF37', b: '\uD83C\uDF37\uD83C\uDF39\uD83C\uDF37\uD83C\uDF37\uD83C\uDF37', answer:3 },
+  { a: '\u2B50\uD83C\uDF19\u2B50\uD83C\uDF19\u2B50', b: '\u2B50\uD83C\uDF19\u2B50\u2B50\u2B50', answer:3 }
+];
+
+// 算术题难度
+export const MATH_DIFFICULTY = [
+  { range: [1, 9],   ops: ['+', '-'] },
+  { range: [1, 20],  ops: ['+', '-', '\u00D7'] },
+  { range: [1, 50],  ops: ['+', '-', '\u00D7'] },
+  { range: [1, 99],  ops: ['+', '-', '\u00D7', '\u00F7'] }
+];

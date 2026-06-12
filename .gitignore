@@ -1,0 +1,19 @@
+node_modules
+dist
+.DS_Store
+*.local
+.vite
+
+# 备份目录
+backup-*/
+
+# 测试产物
+test-results/
+playwright-report/
+
+# IDE
+.idea/
+.vscode/
+# 本地开发残留
+dev-out.txt
+test-insert.txt

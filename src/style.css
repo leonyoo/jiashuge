@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #app { height: 100%; }
+body {
+  background: #f3ead2;
+  color: #3a342b;
+  font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+.font-hand { font-family: 'Ma Shan Zheng','KaiTi','STKaiti',serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.big-font { font-size: 18px; }
+.big-font .text-sm { font-size: 18px; }
+.big-font .text-base { font-size: 20px; }
+.big-font .text-lg { font-size: 22px; }
+.big-font .text-xl { font-size: 26px; }
+.big-font .text-2xl { font-size: 32px; }
+.fade-enter-active, .fade-leave-active { transition: opacity .25s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
